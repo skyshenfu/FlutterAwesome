@@ -7,12 +7,16 @@ class TopBarWidget extends StatelessWidget{
     return Material(
       child: Container(
         height: 56.0,
-        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        padding: const EdgeInsets.symmetric(horizontal: 0.0),
         color: Colors.amber,
-        margin:const EdgeInsets.all(23.0),
+        margin:const EdgeInsets.all(0.0),
         child: Row(
           children: <Widget>[
-            IconButton(icon: Icon(Icons.access_time),tooltip: "这里", onPressed: null)
+            IconButton(icon: Icon(Icons.time_to_leave),tooltip: "这里", onPressed: null),
+            Expanded(
+              child:Center(child: Text("这里是标题"),),
+            ),
+            IconButton(icon: Icon(Icons.insert_chart),tooltip: "这里", onPressed: null),
           ],
         ),
       ),
