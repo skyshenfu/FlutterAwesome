@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_awesome/simpleLayout/pages/decoration_page.dart';
+import 'package:flutter_awesome/simpleLayout/pages/material_simple_page.dart';
 import 'package:flutter_awesome/simpleLayout/pages/simple_page.dart';
 
 void main() => runApp(MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primaryColor: Colors.greenAccent,
       ),
-      home: SimplePage()
+      home: SimpleMaterialPage()
     );
   }
 }

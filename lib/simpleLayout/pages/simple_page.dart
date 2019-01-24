@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_awesome/simpleLayout/widgets/topbar.dart';
 
 class SimplePage extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -10,7 +12,7 @@ class SimplePage extends StatelessWidget {
       child: Column(
         children: <Widget>[
           new SafeArea(
-            child: TopBarWidget(),
+            child: TopBarWidget(title:Text("123")),
             bottom: false,
           ),
           new Expanded(
@@ -18,7 +20,7 @@ class SimplePage extends StatelessWidget {
                 color: Colors.green,
                 width: double.infinity,
                 height: double.infinity,
-                child: Center(child: Text("123"),),
+                child: Center(child: Text("1s23"),),
             ),
           )
         ],
