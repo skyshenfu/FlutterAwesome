@@ -29,7 +29,11 @@ class _SimpleMaterialPage extends State<SimpleMaterialPage>{
           ),
           Text(
             'You have pushed the button this many times:',
+          ),
+          Text(
+            'You have pushed the button this many times:',
           )
+
 
         ],
       ),
