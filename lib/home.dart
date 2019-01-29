@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_awesome/simpleLayout/pages/material_simple_input_form_page.dart';
 class HomePage extends StatefulWidget{
 
   @override
@@ -6,6 +7,7 @@ class HomePage extends StatefulWidget{
 
 }
 class _HomeState extends State<HomePage>{
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +18,7 @@ class _HomeState extends State<HomePage>{
 
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Column(
+        child: Wrap(
           // Column is also layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
           // children horizontally, and tries to be as tall as its parent.
@@ -31,15 +33,12 @@ class _HomeState extends State<HomePage>{
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              'here',
-              style: Theme.of(context).textTheme.display1,
-            ),
+            FlatButton(onPressed: (){
+              Navigator.push(context, new MaterialPageRoute(builder: (context){
+                return new SimpleMaterialInputFormPage();
+              }));
+            }, child: Text("FLAT按钮1"),)
           ],
         ),
       ),

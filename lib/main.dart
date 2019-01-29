@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_awesome/home.dart';
 import 'package:flutter_awesome/simpleLayout/pages/decoration_page.dart';
+import 'package:flutter_awesome/simpleLayout/pages/material_simple_input_form_page.dart';
 import 'package:flutter_awesome/simpleLayout/pages/material_simple_input_page.dart';
 import 'package:flutter_awesome/simpleLayout/pages/material_simple_page.dart';
 import 'package:flutter_awesome/simpleLayout/pages/simple_page.dart';
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primaryColor: Colors.greenAccent,
       ),
-      home: SimpleMaterialInputPage()
+      home: HomePage()
     );
   }
 }
