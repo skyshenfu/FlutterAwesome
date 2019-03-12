@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_awesome/simpleLayout/widgets/drawer_widget.dart';
 
 class SimpleMaterialInputFormPage extends StatefulWidget {
   @override
@@ -78,26 +79,30 @@ class _SimpleMaterialInputFormPage extends State<SimpleMaterialInputFormPage> {
                 color: Colors.blue,
                 fontSize: 18.0,
                 height: 1.2,
-                background: new Paint()..color=Colors.yellow,
-                decoration:TextDecoration.underline,
-                decorationStyle: TextDecorationStyle.dashed
-            ),
+                background: new Paint()..color = Colors.yellow,
+                decoration: TextDecoration.underline,
+                decorationStyle: TextDecorationStyle.dashed),
           ),
-          SizedBox(
-            width: 100.0,
-            height: 100.0,
-            child: Container(
-              child: Text('You have pushed the button this many times' * 4,
-                  overflow: TextOverflow.ellipsis,
-              ),
-              decoration: BoxDecoration(
-                color: Colors.green,
-              ),
+          ClipRect(
+              child: SizedBox(
+                width: 100.0,
+                height: 100.0,
+                child: Container(
+                  child: Text(
+                    'You have pushed the button this many times' * 4,
+                    overflow: TextOverflow.fade,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                  ),
+                ),
             ),
           ),
           ConstrainedBox(
-            constraints: BoxConstraints.tightFor(width: 80,height: 80),
-            child: Image(image: NetworkImage("http://a.hiphotos.baidu.com/image/pic/item/6a600c338744ebf832af47dad4f9d72a6159a77c.jpg"),
+            constraints: BoxConstraints.tightFor(width: 80, height: 80),
+            child: Image(
+              image: NetworkImage(
+                  "http://a.hiphotos.baidu.com/image/pic/item/6a600c338744ebf832af47dad4f9d72a6159a77c.jpg"),
               fit: BoxFit.fill,
             ),
           ),
@@ -108,6 +113,7 @@ class _SimpleMaterialInputFormPage extends State<SimpleMaterialInputFormPage> {
         backgroundColor: checkButton ? Colors.green : Colors.deepOrange,
         child: Icon(Icons.time_to_leave),
       ),
+      drawer: MyDrawer(),
     );
   }
 
